@@ -1,0 +1,29 @@
+{
+  "name": "asynchronous-javascript",
+  "version": "1.0.0",
+  "description": "How to use asynchronous functions in javascript",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "callback": "node src/callbacks.js",
+    "promise": "node src/promise.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlburgos95/asynchronous-javascript.git"
+  },
+  "keywords": [
+    "callbacks",
+    "promise",
+    "async"
+  ],
+  "author": "José Luis Burgos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlburgos95/asynchronous-javascript/issues"
+  },
+  "homepage": "https://github.com/jlburgos95/asynchronous-javascript#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
