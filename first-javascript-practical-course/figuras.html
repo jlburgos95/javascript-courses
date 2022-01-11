@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geométricas</title>
+  </head>
+  <body>
+    <header>
+      <h1>Figuras Geométricas</h1>
+    </header>
+    <p>Primer talle del curso</p>
+    <section>
+      <h2>Calcula el área y perímetro de un cuadrado</h2>
+      <form action="">
+        <label for="inputCuadrado"
+          >Escribe cuanto mide cada lado del cuadrado</label
+        >
+        <input id="inputCuadrado" type="number" />
+        <button type="button" onclick="calcularPerimetroCuadrado()">
+          Calcular perímetro
+        </button>
+        <button type="button" onclick="calcularAreaCuadrado()">
+          Calcular área
+        </button>
+        <p id="resultadoCuadrado"></p>
+      </form>
+    </section>
+    <section>
+      <h2>Calcula la altura de un triángulo isósceles</h2>
+      <form action="">
+        <label for="">
+          <span>Escribe los lados del triángulo</span>
+          <input id="ladoTriangulo01" type="number" placeholder="Base" />
+          <input id="ladoTriangulo02" type="number" placeholder="Lado A" />
+          <input id="ladoTriangulo03" type="number" placeholder="Lado B" />
+        </label>
+        <button type="button" onclick="calcularAlturaTriangulo()">
+          Calcular altura
+        </button>
+        <p id="resultadoTriangulo"></p>
+      </form>
+    </section>
+    <script src="./figuras.js"></script>
+  </body>
+</html>
