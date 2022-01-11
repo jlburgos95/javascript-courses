@@ -1,0 +1,14 @@
+{
+  "name": "professional-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "server": "live-server"
+  },
+  "author": "José Luis Burgos Gómez <jlburgos95@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
