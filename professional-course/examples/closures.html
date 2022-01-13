@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Abrir consola</h1>
+    <script>
+      /*IIFE: Immediately Invoked Function Expression. Esta función se invoca a si sola
+      una vez en el lugar del código donde se declara*/
+      console.group('IIFE');
+      (function () {
+        let color = 'green';
+        function printColor() {
+          console.log(color);
+        }
+        printColor();
+      })();
+      console.groupEnd();
+      /*Para este caso la variable y la función solo son accedidas por dentro del IIFE
+      y no de manera global*/
+
+      //Regresar funciones
+      console.group('Return functions');
+      function makeColorPrinter(color) {
+        let colorMessage = `The color is ${color}`;
+        return function () {
+          console.log(colorMessage);
+        };
+      }
+      let greenColorPrinter = makeColorPrinter('green');
+      console.log(greenColorPrinter());
+      /*La función recuerda el valor que se le aseignó a makeColorPrinter a pesar de que
+      no está disponible de manera global, por eso imprime undefined*/
+      console.groupEnd();
+
+      //Variables privadas
+      console.group('Private Variables');
+      const counter1 = {
+        count: 3,
+      };
+      console.log('Public counter', counter1.count);
+      //Count está disponible de manera pública
+      function makeCounter(n) {
+        let count = n;
+
+        return {
+          increase: function () {
+            count += 1;
+          },
+          decrease: function () {
+            count -= 1;
+          },
+          getCount: function () {
+            return count;
+          },
+        };
+      }
+      let counter2 = makeCounter(7);
+      console.log('Private counter');
+      console.log('The count is: ', counter2.getCount());
+      counter2.increase();
+      console.log('The count is: ', counter2.getCount());
+      counter2.decrease();
+      counter2.decrease();
+      counter2.decrease();
+      counter2.decrease();
+      console.log('The count is: ', counter2.getCount());
+      console.log(counter2.count);
+      /*Aquí count no es accesible de manera global y solo puede ser modificado mediante las funciones
+      establecidas para ello*/
+      console.groupEnd();
+    </script>
+  </body>
+</html>

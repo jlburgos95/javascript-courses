@@ -30,7 +30,7 @@ main {
   max-width: 960px;
 }
 
-.btn-play {
+.btns-container button {
   margin-top: 15px;
   border: 0;
   background-color: #4f65ac;
