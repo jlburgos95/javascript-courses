@@ -26,8 +26,19 @@ class MediaPlayer {
     this.videoEl.muted = !this.videoEl.muted;
   }
   initPlugins() {
+    const player = {
+      media: this.videoEl,
+      play: () => this.play(),
+      pause: () => this.pause(),
+      get muted() {
+        return this.media.muted;
+      },
+      set muted(value) {
+        this.media.muted = value;
+      },
+    };
     this.plugins.forEach((plugin) => {
-      plugin.run(this);
+      plugin.run(player);
     });
   }
 }
