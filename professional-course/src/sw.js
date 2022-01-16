@@ -22,14 +22,15 @@ self.addEventListener('fetch', (event) => {
 async function precache() {
   const cache = await caches.open(VERSION);
   return cache.addAll([
-    './',
+    //Comentamos porque al usar typescript se crean otros archivos con diferentes nombres y marca error
+    /* './',
     './index.html',
     './index.js',
     './MediaPlayer.js',
     './plugins/AutoPlay.js',
-    './plugins/AutoPause.js',
+    './plugins/AutoPause.ts',
     './styles.css',
-    '../assets/BigBuckBunny.mp4',
+    '../assets/BigBuckBunny.mp4', */
   ]);
 }
 
